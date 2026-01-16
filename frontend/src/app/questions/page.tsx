@@ -13,7 +13,8 @@ export default function QuestionsPage() {
   const [answers, setAnswers] = useState<Record<string, AnswerValue[]>>({});
 
   const currentQuestion = questions[currentIndex];
-  const selectedValues = answers[currentQuestion.id] ?? [];
+  const questionId = currentQuestion.id as string;
+  const selectedValues = answers[questionId] ?? [];
 
   const handleSelect = (values: AnswerValue[]) => {
     setAnswers((prev) => ({
