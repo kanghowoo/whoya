@@ -108,7 +108,15 @@ export default function ResultPage() {
   if (!data) {
     return (
       <main className="container">
-        <div className="loading">분석 중...</div>
+        <div className="loading">
+          <div className="loading-spinner">
+            <svg viewBox="0 0 50 50" className="spinner-icon">
+              <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeDasharray="80, 200" />
+            </svg>
+          </div>
+          <p className="loading-text">분석 중</p>
+          <p className="loading-subtext">당신의 답변을 바탕으로 투표 기준을 분석하고 있어요</p>
+        </div>
       </main>
     );
   }
