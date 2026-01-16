@@ -6,7 +6,7 @@ export type QuestionOption = {
 };
 
 export type Question = {
-  id: keyof typeof import("@/logic/summary").Answers | string;
+  id: string;
   text: string;
   options: QuestionOption[];
   multiSelect?: boolean;
